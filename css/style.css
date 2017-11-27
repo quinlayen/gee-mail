@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Asap', 'sans-serif';
+    font-weight: bold;
 }
 
 body {
@@ -30,7 +31,7 @@ h3{
     justify-content: space-between;
 }
 
-.container {
+#message {
     color: grey;
     width: 1000px;
     margin-left: auto;
@@ -38,86 +39,26 @@ h3{
     padding-top: 20px;
     background-color: white;
     box-sizing: border-box;
+    
 }
 
 .sidebar{
    
     float: left;
     height: 1000px;
-    box-sizing: border-box;
-    
-
+    box-sizing: border-box;   
 }
 
 
-
-
-
-
-
-
-
-
-/*
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+#counter {
+    font-weight: bold;
 }
 
-body {
-    background-image:url(geemail-background.jpg);
-    margin-top: 20px;
+#composeBtn {
+    padding: 6px 25px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Asap', 'sans-serif';
+    border-radius: 6px;
 }
-h1, h3{
-    color: white;
-    margin-left: 30px
-}
-
-.menu-container{
-  color: #fff;
-  background-color: #5995DA;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-.menu{
-    display: flex;
-    justify-content: space-between;
-    width: 1400px;
-}
-.container {
-    width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-}
-.title {
-    display: flex;
-    justify-content: space-between;
-}
-.contents{
-    float:left;
-    height: 600px;
-    padding-top: 10px;
-}
- #sender-contents {
-    background-color: greenyellow;
-    width: 20%;
-}
-
- #subject-contents {
-    background-color: aqua;
-    width: 55%;
-}
-
- #date-contents {
-    background-color: mediumvioletred;
-    width: 15%; 
-}
-
- #inbox-contents {
-    background-color: fuchsia;
-    width: 10%;
-}
-*/

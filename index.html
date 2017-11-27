@@ -41,7 +41,7 @@
            
              
                 senderContent = createElement('div', 'senderName', emailInfo[i].sender);
-                main.appendChild(senderContent);
+                message.appendChild(senderContent);
                 
                 subjectContent = createElement('div', 'subjectContents', emailInfo[i].subject);
                 senderContent.appendChild(subjectContent);
@@ -71,7 +71,7 @@
                 let autoEmailGen = function(){
                     
                 senderContent = createElement('div', 'senderName', getNewMessage().sender);
-                main.appendChild(senderContent);
+                message.appendChild(senderContent);
                 //main.insertBefore(senderContent, main.childNodes[0]);
                 
                 subjectContent = createElement('div', 'subjectContents', getNewMessage().subject);
@@ -109,19 +109,31 @@
                     }
                 }   
                 }
-                
+              // random functions
+            
+            function buttonAlert(){
+                alert('This button is under construction.  Come back another time');
+            }
+            
             
             
             };
         </script>
 	</head>
 	<body>
-       <h1>Geemail</h1> <h3> Everybody's Eemail</h3>
         
-        <div class="sidebar" id="inbox">Inbox  (<span id='counter'></span>)<br>Important<br>Sent Mail<br>Drafts<br>Junk Mail<br>Deleted Items</br></div>
 		<div class="container" id="main">
-    
-           
+            <h1>Geemail</h1> <h3> Everybody's Eemail</h3>
+            <div class="sidebar" id="inbox">
+                <button onclick="buttonAlert()" id="composeBtn">Compose</button><br>
+                Inbox  (<span id='counter'></span>)<br>
+                Important<br>
+                Sent Mail<br>
+                Drafts<br>
+                Junk Mail<br>
+                Deleted Items</br>
+        </div>
+            <div class="container" id="message">
             
             
 		</div>
