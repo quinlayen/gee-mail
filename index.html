@@ -71,21 +71,19 @@
                 let autoEmailGen = function(){
                     
                 senderContent = createElement('div', 'senderName', getNewMessage().sender);
-                //message.appendChild(senderContent);
                 message.insertBefore(senderContent, message.childNodes[0]);
                 
                 subjectContent = createElement('div', 'subjectContents', getNewMessage().subject);
-               // senderContent.appendChild(subjectContent);
-                senderContent.insertBefore(subjectContent, senderContent.childNodes[0]);
-                
+                senderContent.appendChild(subjectContent);
+           
                 dateContent = createElement('div', 'sentDate', getNewMessage().date);
-               // senderContent.appendChild(dateContent);
-                senderContent.insertBefore(dateContent, senderContent.childNodes[0]);
+                senderContent.appendChild(dateContent);
                 
                 bodyContents = createElement('div', 'bodyContents', getNewMessage().body);
-               // senderContent.appendChild(bodyContents);
-                senderContent.insertBefore(bodyContents, senderContent.childNodes[0]);
+                senderContent.appendChild(bodyContents);
                 bodyContents.style.display = 'none';
+                    
+                showBodiesF();
                  
                 }
                       
@@ -95,22 +93,21 @@
                 function showBodiesF(){ 
                 let showBody = document.querySelectorAll('.senderName');
                 for (var i = 0; i < showBody.length; i++){
-                    showBody[i].addEventListener('click', showBodiesF);
-                    showBody[i].addEventListener('click', showBodies);
+                showBody[i].addEventListener('click', showBodiesF);
+                showBody[i].addEventListener('click', showBodies);
                 }
 
                 function showBodies() {
-                    let message = this.querySelectorAll('.bodyContents')[0];
-                    if (message.style.display === 'none'){
-                        message.style.display = 'block';
-                        
-                        
+                    console.log("clicked");
+                    let messageB = this.querySelectorAll('.bodyContents')[0];
+                    if (messageB.style.display === 'none'){
+                        messageB.style.display = 'block'    
                     }else{
-                        message.style.display = 'none';
+                        messageB.style.display = 'none';
                     }
                 }   
-                }
-              // Button operation
+              }
+            // Button operation
             
             function buttonAlert(){
                 alert('This button is under construction.  Come back another time');
@@ -119,6 +116,7 @@
             document.querySelector(".button").addEventListener("click", buttonAlert);
             
             // search field operation
+            
             function searchF(){
                 alert("Ha! You actually thought something useful would happen.  Im not that good... yet.")
             }
@@ -134,7 +132,7 @@
                 <h1>Geemail</h1> <h3> Everybody's Eemail</h3>
                 </div>
                 <div class="search" id="searchBox">
-                    <input type ="search" value="Go ahead! Search Something." size="60px" onsearch="searchF()">               
+                    <input type ="search" value="Search" size="60px" onsearch="searchF()">               
                 </div>
                 
             </div>
