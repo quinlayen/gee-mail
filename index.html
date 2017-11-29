@@ -71,20 +71,20 @@
                 let autoEmailGen = function(){
                     
                 senderContent = createElement('div', 'senderName', getNewMessage().sender);
-                message.appendChild(senderContent);
-                //main.insertBefore(senderContent, main.childNodes[0]);
+                //message.appendChild(senderContent);
+                message.insertBefore(senderContent, message.childNodes[0]);
                 
                 subjectContent = createElement('div', 'subjectContents', getNewMessage().subject);
-                senderContent.appendChild(subjectContent);
-                //senderContent.insertBefore(subjectContent, subjectContent.childNodes[0]);
+               // senderContent.appendChild(subjectContent);
+                senderContent.insertBefore(subjectContent, senderContent.childNodes[0]);
                 
                 dateContent = createElement('div', 'sentDate', getNewMessage().date);
-                senderContent.appendChild(dateContent);
-                //senderContent.insertBefore(dateContent, dateContent.childNodes[0]);
+               // senderContent.appendChild(dateContent);
+                senderContent.insertBefore(dateContent, senderContent.childNodes[0]);
                 
                 bodyContents = createElement('div', 'bodyContents', getNewMessage().body);
-                senderContent.appendChild(bodyContents);
-                //senderContent.insertBefore(bodyContents, bodyContents.childNodes[0]);
+               // senderContent.appendChild(bodyContents);
+                senderContent.insertBefore(bodyContents, senderContent.childNodes[0]);
                 bodyContents.style.display = 'none';
                  
                 }
@@ -104,38 +104,59 @@
                     if (message.style.display === 'none'){
                         message.style.display = 'block';
                         
+                        
                     }else{
                         message.style.display = 'none';
                     }
                 }   
                 }
-              // random functions
+              // Button operation
             
             function buttonAlert(){
                 alert('This button is under construction.  Come back another time');
             }
             
+            document.querySelector(".button").addEventListener("click", buttonAlert);
             
-            
+            // search field operation
+            function searchF(){
+                alert("Ha! You actually thought something useful would happen.  Im not that good... yet.")
+            }
+            document.querySelector(".search").addEventListener("change", searchF);
             };
         </script>
 	</head>
 	<body>
         
 		<div class="container" id="main">
-            <h1>Geemail</h1> <h3> Everybody's Eemail</h3>
+            <div class="header">
+                <div>
+                <h1>Geemail</h1> <h3> Everybody's Eemail</h3>
+                </div>
+                <div class="search" id="searchBox">
+                    <input type ="search" value="Go ahead! Search Something." size="60px" onsearch="searchF()">               
+                </div>
+                
+            </div>
+            
             <div class="sidebar" id="inbox">
-                <button onclick="buttonAlert()" id="composeBtn">Compose</button><br>
+                <button class="button" id="composeBtn">Compose</button><br>
                 Inbox  (<span id='counter'></span>)<br>
                 Important<br>
                 Sent Mail<br>
                 Drafts<br>
                 Junk Mail<br>
                 Deleted Items</br>
-        </div>
-            <div class="container" id="message">
+            </div>
             
-            
+               
+        
+           
+        
+                    <div class="container" id="message"></div>
+        
+                <div class="footer">13.18GB (87%) of 15GB used<span>Terms-Privacy</span><span>Last account  activity 18 minutes ago</span>
+                </div>
 		</div>
 	</body>
 </html>

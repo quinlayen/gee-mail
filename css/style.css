@@ -34,8 +34,7 @@ h3{
 #message {
     color: grey;
     width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     padding-top: 20px;
     background-color: white;
     box-sizing: border-box;
@@ -61,4 +60,25 @@ h3{
     margin-bottom: 10px;
     font-family: 'Asap', 'sans-serif';
     border-radius: 6px;
+}
+
+.footer{
+    margin-top: 10px;
+    margin-left: 130px;
+    margin-right: auto;
+    width: 1000px;
+    font-size: 65%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.search{
+    width: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.header{
+    display:block;
 }
